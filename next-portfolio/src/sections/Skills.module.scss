@@ -1,0 +1,27 @@
+@import '@/styles/variables';
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.skillCategory {
+  background: rgba($surface-color, 0.6);
+  border: 1px solid $surface-border;
+  border-radius: $border-radius;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: $text-primary;
+  }
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}

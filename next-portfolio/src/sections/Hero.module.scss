@@ -1,0 +1,82 @@
+@import '@/styles/variables';
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  max-width: 700px;
+}
+
+.greeting {
+  font-size: 1.2rem;
+  color: $accent-primary;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #fff, $text-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: $text-secondary;
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  font-size: 1.15rem;
+  color: $text-secondary;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba($surface-color, 0.4);
+    border: 1px solid $surface-border;
+    color: $text-secondary;
+    transition: $transition-smooth;
+
+    &:hover {
+      background: $accent-primary;
+      color: #fff;
+      border-color: $accent-primary;
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba($accent-primary, 0.4);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .name { font-size: 3rem; }
+  .role { font-size: 1.8rem; }
+  .buttons { flex-direction: column; }
+}

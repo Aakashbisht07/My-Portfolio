@@ -1,0 +1,15 @@
+@import '@/styles/variables';
+
+.footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: $text-secondary;
+  border-top: 1px solid $surface-border;
+  margin-top: 4rem;
+  background: rgba($surface-color, 0.3);
+  backdrop-filter: blur(10px);
+  
+  p {
+    font-size: 0.95rem;
+  }
+}

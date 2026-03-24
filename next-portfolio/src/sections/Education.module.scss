@@ -1,0 +1,85 @@
+@import '@/styles/variables';
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: $surface-border;
+  }
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 2.5rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -2.4rem;
+    top: 0.2rem;
+    width: 14px;
+    height: 14px;
+    background: $bg-color;
+    border: 2px solid $accent-primary;
+    border-radius: 50%;
+    z-index: 1;
+    transition: $transition-smooth;
+  }
+
+  &:hover::before {
+    background: $accent-primary;
+    box-shadow: 0 0 10px rgba($accent-primary, 0.5);
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    color: $text-primary;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .certificateBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $text-primary;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid rgba($accent-primary, 0.3);
+    border-radius: 6px;
+    transition: $transition-smooth;
+
+    &:hover {
+      background: rgba($accent-primary, 0.1);
+      border-color: $accent-primary;
+      color: $accent-primary;
+    }
+  }
+}
+
+.date {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: rgba($accent-primary, 0.1);
+  color: $accent-primary;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}

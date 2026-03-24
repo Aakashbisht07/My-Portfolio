@@ -1,0 +1,17 @@
+@import '@/styles/variables';
+
+.badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  color: $text-primary;
+  cursor: default;
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: $accent-primary;
+    color: #fff;
+  }
+}

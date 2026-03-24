@@ -1,0 +1,80 @@
+@import '@/styles/variables';
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  background: rgba($surface-color, 0.6);
+  border: 1px solid $surface-border;
+  border-radius: $border-radius;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    border-color: $accent-secondary;
+    box-shadow: 0 10px 30px rgba($accent-secondary, 0.15);
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    color: $text-primary;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.date {
+  font-size: 0.9rem;
+  color: $accent-primary;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.desc {
+  color: $text-secondary;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: auto;
+
+  span {
+    font-size: 0.8rem;
+    color: $accent-secondary;
+    background: rgba($accent-secondary, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.linkBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $text-secondary;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: $transition-smooth;
+
+  &:hover {
+    color: $accent-primary;
+  }
+}
